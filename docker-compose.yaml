@@ -1,0 +1,16 @@
+services:
+  dbtfromzero:
+    image: clickhouse/clickhouse-server:25.8
+    container_name: dbtfromzero
+    ports:
+      - "18123:8123"
+    volumes:
+      - dbtfromzero_data:/var/lib/clickhouse
+    environment:
+      CLICKHOUSE_USER: user
+      CLICKHOUSE_PASSWORD: password
+      TZ: UTC
+    restart: unless-stopped
+
+volumes:
+  dbtfromzero_data:

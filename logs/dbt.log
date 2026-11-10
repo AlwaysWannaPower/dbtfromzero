@@ -1,0 +1,58 @@
+==================== 2026-11-04T17:47:40.691823Z | 01a1a7ac-7912-7243-9ee6-13f9bd95f61b ====================
+17:47:40.691920 [info ]: Installing dbt project and profile setup
+17:47:40.692717 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+17:47:40.692743 [info ]: Success Project created successfully!
+17:47:40.692754 [info ]: Info Project name: clickhouse_project
+17:47:40.692761 [info ]: Info Project directory: clickhouse_project
+17:47:45.042029 [info ]: Info Setting up your profile...
+17:47:45.042107 [info ]: Loading ~/.dbt/profiles.yml
+17:47:45.042247 [info ]: Info Creating new profile...
+17:48:49.947596 [info ]: Success Profile written to /home/august/.dbt/profiles.yml
+17:48:49.947641 [info ]: Validating profile inputs, adapters, and connection
+
+17:48:49.947648 [info ]: dbt 2.0.11
+17:48:49.947761 [info ]: Started loading project
+17:48:49.948075 [info ]: Loading ~/.dbt/profiles.yml
+17:48:49.948310 [info ]: Finished loading project [  0.00s]
+17:48:49.948349 [info ]: Started debugging
+17:48:49.948370 [info ]: Debugging profile: dev
+17:48:49.948385 [info ]: Debugging dbt version: 2.0.11
+17:48:49.948390 [info ]: Debugging platform: linux x86_64 (unix)
+17:48:49.948400 [info ]: Debugging adapter type: clickhouse (remote)
+17:48:49.950083 [info ]: Debugging dependencies:
+  git: OK
+17:48:49.950150 [info ]: Debugging connection:
+  "schema": "dbtfromzero",
+  "host": "localhost",
+  "user": "user",
+  "cluster": "",
+  "verify": true,
+  "secure": false,
+  "retries": 1,
+  "compression": "",
+  "connect_timeout": 10,
+  "send_receive_timeout": 300,
+  "cluster_mode": false,
+  "use_lw_deletes": false,
+  "check_exchange": true,
+  "local_suffix": "_local",
+  "local_db_prefix": "",
+  "allow_automatic_deduplication": false,
+  "custom_settings": {},
+  "database_engine": "",
+  "threads": 16,
+  "sync_request_timeout": 5,
+  "compress_block_size": 1048576
+17:48:49.950353 [debug]: ClickHouse driver resolved: clickhouse 0.1.1
+17:48:49.999462 [info ]: Debugging connection test: ERROR
+17:48:49.999505 [info ]: Finished debugging [  0.05s]
+17:48:49.999539 [error]: [AuthenticationFailed (dbt1011)]: dbt was unable to connect to the database configured for the `clickhouse` adapter.
+The following error was returned:
+
+External error: network error: client error (Connect)
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+17:48:51.320601 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error for target 'dev' [1m 11s]
